@@ -1,0 +1,208 @@
+.main-page{
+    padding-top: 170px;
+}
+.performance-frame{
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+    clip-path: polygon(0 0, 94% 0, 100% 50%, 94% 100%, 0 100%, 125px 50%);
+    
+}
+.arrow-frame:first-child{
+    margin-left: 0;
+}
+
+.arrow-frame{
+    height: 620px;
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 25px;
+    margin-left: -131px;
+    
+}
+.arrow-frame img{
+    transition: all .8s;
+    clip-path: polygon(0 0, 170px 0, 295px 50%, 170px 100%, 0 100%, 125px 50%);
+    width: 295px;
+    object-fit: cover;
+    height: 100%;
+    object-position: top;
+    filter: grayscale(1);
+    opacity: 0.6;
+}
+.arrow-frame:hover img{
+    clip-path: polygon(0 0, 930px 0, 1055px 50%, 930px 100%, 0 100%, 125px 50%);
+    width: 1055px;
+    object-position: unset;
+    filter: none;
+}
+
+.more-info{
+    width: 274px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 180px;
+    visibility: hidden;
+    transition: all 0.3s;
+    
+}
+
+.arrow-frame:hover .more-info{
+    visibility: visible;
+}
+.more-info >h2{
+    font-family: caps;
+    font-size: 28px;
+    color: white;
+    margin: 0;
+}
+.more-info span{
+    color: white;
+    font-size: 15px;
+    font-family: medium;
+}
+.spectacle-date{
+    font-family: caps!important;
+    font-size: 20px!important;
+    margin-top: 10px;
+}
+.more-info >a{
+    padding: 13px;
+    border-radius: 5px;
+    border: 1px solid #101223;
+    background-color: white;
+    text-decoration: none;
+    font-size: 18px;
+    color: #101223;
+    font-family: caps;
+    margin-top: 12px;
+    
+}
+.more-info >a:hover{
+    background-color: #101223;
+    color: white;
+    transition: 0.5s;
+}
+.devices{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+.voice-language img{
+    margin-right: 20px;
+}
+.voice-language {
+    display: flex;
+    position: fixed;
+}
+.language-changer,
+.voice-changer{
+    cursor: pointer;
+}
+.see-calendar >a{
+    text-decoration: none;
+    padding: 13px 24px;
+    background-color: #D02F27;
+    border-radius: 5px;
+    color: #FFFFFF;
+    border: 1px solid #D02F27;
+    transition: 0.5s;
+}
+.see-calendar >a:hover{
+    color: #D02F27;
+    background-color: transparent;
+}
+.see-calendar >a:hover path{
+    stroke: #D02F27;;
+}
+.see-calendar >a svg{
+    margin-right: 13px;
+}
+.social-network{
+    position: fixed;
+    right: 48px;
+}
+.social-network span{
+    font-size: 16px;
+    color: #404252;
+    margin-right: 22px;
+    cursor: default;
+    transition: 0.5s;
+}
+.social-network span:hover{
+    color: #D02F27;
+    font-weight: bold;
+}
+.social-arrow{
+    margin-right: 20px;
+}
+.social-network >a{
+    margin-right: 20px;
+}
+.social-network a> svg{
+    transition: 0.5s;
+}
+.social-network >a svg:hover{
+    transform: scale(1.2)
+}
+
+.insta-logo path,
+.fb-logo path{
+    transition: 0.5s;
+}
+.fb-logo:hover path{
+    fill: #2AA4F4;
+}
+.insta-logo:hover path{
+    fill: #833ab4;
+}
+@media(max-width:1480px){
+    .arrow-frame{
+        height: 400px;
+        margin-right: -20px;
+    }
+    .arrow-frame:hover img{
+        width: 1100px;
+    }
+
+    .performance-frame{
+        margin-top: 0px;
+        padding-left: 40px;
+        -webkit-clip-path: polygon(0 0, 94% 0, 100% 50%, 94% 100%, 0 100%, 125px 50%);
+        clip-path: polygon(0 -38%, 88% 0, 96% 50%, 88% 100%, 0 138%, 190px 50%);
+     
+    }
+    .arrow-frame img {
+        -webkit-clip-path: polygon(0 0, 170px 0, 295px 50%, 170px 100%, 0 100%, 125px 50%);
+        clip-path: polygon(0 0, 110px 0, 231px 50%, 110px 100%, 0 100%, 120px 50%);
+        width: 275px;
+    }
+}
+@media(max-height:1368px){
+   .main-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 128px);
+    padding-top: 120px;
+   } 
+   .nav-menu-items-active {
+       height: 40vh;
+   }
+   .performance-frame{
+    clip-path: polygon(0 -6%, 91% 0, 100% 50%, 91% 100%, 0 110%, 134px 50%);
+   }
+}
+@media(max-height:874px){
+  .performance-frame{
+      margin-top: 0px;
+  }
+}

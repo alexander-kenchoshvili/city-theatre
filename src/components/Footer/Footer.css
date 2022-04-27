@@ -1,0 +1,20 @@
+.footer{
+    width: 100%;
+}
+.footer-inner{
+    margin-top: 48px;
+    background-color: white;
+    padding: 28px 0px;
+    display: flex;
+    justify-content: center;
+    color: #101223;
+    font-family: medium;
+    font-size: 16px;
+    cursor: default;
+}
+@media(max-width:450px){
+    .footer-inner{
+        padding: 10px;
+        font-size: 11px;
+    }
+}
